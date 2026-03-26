@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Article</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container">
+    <h1 id="title"></h1>
+    <p id="content"></p>
+</div>
+
+<script>
+let articles = {};
+
+fetch('data.json')
+.then(res => res.json())
+.then(data => {
+    articles = data;
+
+    const params = new URLSearchParams(window.location.search);
+    const articleNum = params.get("article");
+
+    if (articles[articleNum]) {
+        document.getElementById("title").innerText = "Article " + articleNum;
+        document.getElementById("content").innerText = articles[articleNum];
+    } else {
+        document.getElementById("title").innerText = "Not Found";
+        document.getElementById("content").innerText = "Article not available.";
+    }
+});
+</script>
+
+</body>
+</html>
