@@ -72,3 +72,9 @@ function toggleTheme() {
     document.body.classList.toggle("dark");
 }
 
+function handleKeyPress(event) {
+    if (event.key === "Enter") {
+        document.getElementById("suggestions").innerHTML = "";
+        searchArticle();
+    }
+}
