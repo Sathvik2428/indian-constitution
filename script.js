@@ -60,6 +60,11 @@ function showSuggestions() {
 
             count++;
             if (count >= 5) break;
+            function handleKeyPress(event) {
+    if (event.key === "Enter") {
+        searchArticle();
+    }
+}
         }
     }
 }
