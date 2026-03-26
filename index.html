@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Indian Constitution Explorer</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="top-bar">
+        <h1>🇮🇳 Constitution Explorer</h1>
+        <button onclick="toggleTheme()">🌙</button>
+    </div>
+
+    <p class="subtitle">Search Articles of the Indian Constitution</p>
+
+    <div class="search-box">
+        <input type="text" id="searchInput" 
+               placeholder="Enter Article number or keyword..." 
+               oninput="showSuggestions()">
+        <button onclick="searchArticle()">Search</button>
+    </div>
+
+    <div id="suggestions" class="suggestions"></div>
+
+    <div id="result" class="result-card"></div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
