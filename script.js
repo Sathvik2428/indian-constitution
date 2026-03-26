@@ -60,11 +60,7 @@ function showSuggestions() {
 
             count++;
             if (count >= 5) break;
-            function handleKeyPress(event) {
-    if (event.key === "Enter") {
-        searchArticle();
-    }
-}
+            
         }
     }
 }
@@ -72,4 +68,10 @@ function showSuggestions() {
 // Dark mode toggle
 function toggleTheme() {
     document.body.classList.toggle("dark");
+}
+
+function handleKeyPress(event) {
+    if (event.key === "Enter") {
+        searchArticle();
+    }
 }
