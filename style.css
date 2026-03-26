@@ -124,3 +124,18 @@ button:hover {
 .back-btn:hover {
     background-color: #ffaa00;
 }
+
+@media (max-width: 600px) {
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    .container {
+        width: 95%;
+        padding: 15px;
+    }
+
+    .result-card {
+        width: 90%;
+    }
+}
