@@ -24,8 +24,8 @@ function searchArticle(value = null) {
     }
 
     if (found) {
-        resultDiv.style.display = "block";
-        resultDiv.innerHTML = `
+    window.location.href = `article.html?article=${found.number}`;
+    resultDiv.innerHTML = `
             <h2>Article ${found.number}</h2>
             <p>${found.text}</p>
         `;
@@ -70,8 +70,3 @@ function toggleTheme() {
     document.body.classList.toggle("dark");
 }
 
-function handleKeyPress(event) {
-    if (event.key === "Enter") {
-        searchArticle();
-    }
-}
