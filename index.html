@@ -21,7 +21,8 @@
     <div class="search-box">
         <input type="text" id="searchInput" 
                placeholder="Enter Article number or keyword..." 
-               oninput="showSuggestions()">
+               oninput="showSuggestions()"
+               onkeypress="handleKeyPress(event)">
         <button onclick="searchArticle()">Search</button>
     </div>
 
